@@ -1,6 +1,4 @@
 # importing all the necessary modules
-import wikipedia # will be used in future
-import pyaudio # will be used in future
 import speech_recognition as sr
 import openai
 import os
