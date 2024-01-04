@@ -1,6 +1,4 @@
 # importing all the necessary modules
-import wikipedia # will be used in future
-import pyaudio # will be used in future
 import speech_recognition as sr
 import openai
 import os
@@ -128,6 +126,12 @@ def weather(city_name):
         print("Weather:", info["weather"]["description"])
         say(f"Cloud status: {info['weather']['description']}")
 
+
+# playing something on youtube
+def open_page_on_youtube(queryContent, phrase): # eg: sanam+teri+kasam && sanam teri kasam
+    say(f"Click to play {phrase}")
+    webbrowser.open(f"https://www.youtube.com/results?search_query={queryContent}")
+
 # main program's code
 if __name__ == "__main__":
  chatStr="" # will store the empty chat string
@@ -188,6 +192,7 @@ if __name__ == "__main__":
   elif "artificial intelligence".lower() in query.lower():
       say(f"Searching : f{query}")
       ai(query)
+
   # asking about the weather of a specific city
   elif "weather of".lower() in query.lower():
       parts=query.split("weather of",1)
@@ -198,13 +203,24 @@ if __name__ == "__main__":
   elif "reset chat".lower() in query.lower():
       chatStr=""
       say("Chat has been reset")
-      continue
 
   # assuming everytime the pattern will be like : I want to head news about + "topic"
   elif "news about".lower() in query.lower():
       parts = query.split("about", 1) # spliting the command in 2 parts
       say("Searching news for my master..")
       news(parts[1])
+
+  # open the page of user liked content on youtube
+  elif "on youtube".lower() in query.lower():
+      query=query.lower() # making all the cases lower case
+      split1=query.split("play",1) # play sanam teri kasam on youtube = [""]["sanam teri kasam on youtube"]
+      split2=split1[1].split("on", 1) # perfect on youtube = ["sanam teri kasam"]["youtube"]
+      exact_phrase=split2[0]
+      myQuery=split2[0].strip().replace(" ","+") # sanam teri kasam = sanam+teri+kasam
+      # Note : strip() : to remove leading and trailing whitespace ::: replace() : to replace words
+      # print(myQuery)
+      # print(exact_phrase)
+      open_page_on_youtube(myQuery, exact_phrase) # sanam+teri+kasam , sanam teri kasam
 
   # stopping the assistant through breaking the loop
   elif "Stop".lower() in query.lower():
