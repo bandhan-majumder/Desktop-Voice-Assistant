@@ -6,15 +6,17 @@ Introducing Task Whisperer, your friendly desktop assistant that understands you
 
 🎵 **Play Some Downloaded Tunes:** Need a music break? Command VoiceWizard to play your favorite songs and set the mood. 🎶
 
+▶️ **Play <song_name> on youtube:** Open the youtube page of that song. Click and start listening, no need to search.
+
 💬 **Chat with Me:** Feeling chatty? Engage in a random chat, and let VoiceWizard sprinkle some fun into your day!
 
 🔄 **Reset Chat:** Start fresh by resetting the chat with a quick voice command – a clean slate for new conversations.
 
 📰 **Tell Me the News:** Stay informed! Ask VoiceWizard for the latest news, and get updates without lifting a finger.
 
-🌤️ **Weather Update:** Planning your day? VoiceWizard has got you covered with real-time weather updates for any city.
+🌤️ **Weather of <city_name>:** Planning your day? VoiceWizard has got you covered with real-time weather updates for any city.
 
-✍️ **Write Something Down:** Dictate your thoughts, and let VoiceWizard jot them down in a file. Effortless note-taking!
+✍️ **Write a letter with artificial intelligence:** Dictate your thoughts, and let VoiceWizard jot them down in a file. Effortless note-taking!
 
 ⏰ **What's the Time?:** Curious about the time? Just ask VoiceWizard, and it'll happily announce the current time.
 

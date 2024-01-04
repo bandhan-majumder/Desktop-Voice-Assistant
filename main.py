@@ -21,7 +21,7 @@ def say(mytext):
 def takeInput():
  r=sr.Recognizer()
  with sr.Microphone() as source:
-     r.pause_threshold=1 # minimum audio energy to record
+     r.pause_threshold=1# minimum audio energy to record
      audio=r.listen(source)
      try:
       query= r.recognize_google(audio, language='en-in') # language='bn-in' to type down the orders in bengali
@@ -214,7 +214,8 @@ if __name__ == "__main__":
   elif "on youtube".lower() in query.lower():
       query=query.lower() # making all the cases lower case
       split1=query.split("play",1) # play sanam teri kasam on youtube = [""]["sanam teri kasam on youtube"]
-      split2=split1[1].split("on", 1) # perfect on youtube = ["sanam teri kasam"]["youtube"]
+      split2=split1[1].split(" on", 1) # perfect on youtube = ["sanam teri kasam"]["youtube"]
+      # " on" this space is representing on as an indivisual word. Else for eg: python vs java on youtube will be pyth
       exact_phrase=split2[0]
       myQuery=split2[0].strip().replace(" ","+") # sanam teri kasam = sanam+teri+kasam
       # Note : strip() : to remove leading and trailing whitespace ::: replace() : to replace words
