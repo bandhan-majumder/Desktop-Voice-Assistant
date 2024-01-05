@@ -1,3 +1,5 @@
+![Leonardo_Diffusion_XL_a_robot_is_performing_tasks_on_users_des_3](https://github.com/bandhan-majumder/Desktop-Voice-Assistant-TaskWhisperer/assets/133476557/ac71a747-c560-4a85-b113-59cf44aae342)
+
 **Task Whisperer Desktop Assistant 🎙️💻**
 
 Introducing Task Whisperer, your friendly desktop assistant that understands your every word! 🌟
